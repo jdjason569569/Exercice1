@@ -1,0 +1,33 @@
+<div class="container mt-5 center-container">
+  <form [formGroup]="formPurchase">
+    <div class="card">
+     <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="productName" class="form-label">Nombre:</label>
+                <input type="text"  maxlength="20" minlength="5" class="form-control label" formControlName="productName" placeholder="Ingrese Producto">
+                <span *ngIf="productName?.errors?.['minlength']" class="error-message">
+                  Escriba mínimo 5 caracteres
+                </span>
+            </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="price">Precio:</label>
+                <input type="number" class="form-control label" formControlName="price" placeholder="Ingrese Precio">
+                <span *ngIf="price?.errors?.['min']" class="error-message">
+                  Debe ser mayor a 5
+                </span>
+                <span *ngIf="price?.errors?.['max']" class="error-message">
+                  Debe ser menor a 20
+                </span>
+            </div>
+        </div>
+     </div>
+        <button type="submit"  class="btn btn-primary mt-2 mb-2" (click)="sendform()"> Enviar</button>
+        <button class="btn btn-danger" (click)="clearForm()"> Limpiar</button>
+    </div>
+  </form>
+</div>

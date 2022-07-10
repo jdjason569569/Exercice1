@@ -1,0 +1,20 @@
+.center-container{
+    display: flex;
+    justify-content: center; 
+}
+
+.card{
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.label{
+    width: auto !important;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.error-message{
+    color: red;
+}
