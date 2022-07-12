@@ -19,7 +19,7 @@ export class ComprasComponent implements OnInit {
     price: 0
   }
 
-  constructor( private fb: FormBuilder, ) { }
+  constructor( private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.buildForm();
